@@ -1,0 +1,54 @@
+h1 {
+    grid-area: title;
+    justify-self: center;
+    font-size: 75px;
+    color: white;
+}
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 430px 100px;
+    grid-template-columns: 1fr 403px 1fr;
+    grid-template-areas: 
+    'title title title'
+    'aside grid blank'
+    'ftr ftr ftr';
+    background-image: url(https://i.imgur.com/EB9R9yo.jpeg);
+    background-size: cover;
+}
+ 
+.grid {
+    grid-area: grid;
+    justify-self: center;
+    border: solid;
+    border-color: navy;
+    display: flex;
+    flex-wrap: wrap;
+    height: 400px;
+    width: 400px;
+}
+footer {
+    grid-area: ftr;
+    font-size: 75px;
+    color: white;
+    justify-self: center;
+    background-color: red;
+}
+
+aside {
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-style: bold;
+    font-size: 25px;
+    color: white;
+    background-image: url(https://i.imgur.com/7rcyyU7.png);
+    background-size: contain;
+}
+button {
+    grid-area: ftr;
+    margin: auto;
+}
+
