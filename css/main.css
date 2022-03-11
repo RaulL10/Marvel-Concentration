@@ -1,6 +1,7 @@
 h1 {
     grid-area: title;
     justify-self: center;
+    font-family: 'Comic Neue', cursive;
     font-size: 75px;
     color: white;
 }
@@ -29,20 +30,23 @@ body {
 }
 footer {
     grid-area: ftr;
+    font-family: 'Comic Neue', cursive;
     font-size: 75px;
     color: white;
     justify-self: center;
-    background-color: red;
+    background-color: #00008b;
+    border-radius: 5px;
 }
 
 aside {
     grid-area: aside;
+    font-family: 'Comic Neue', cursive;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-style: bold;
-    font-size: 25px;
+    font-size: 23px;
     color: white;
     background-image: url(https://i.imgur.com/7rcyyU7.png);
     background-size: contain;

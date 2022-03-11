@@ -1,4 +1,3 @@
-// define constants 'fixed' values
 const myCards = [
     {
         name: 'Black Panther',
@@ -85,9 +84,7 @@ const cardsEl = document.querySelectorAll('img')
 
 
 // add event listeners     
-gridEl.addEventListener('click', function() {
-    countClicks()
-}) 
+gridEl.addEventListener('click', countClicks)
 
 
 //funcions
@@ -108,12 +105,13 @@ function addCards() {
 }
 
 function revealCards() {
+    console.log('revealCards firing')
     const cardId = this.getAttribute('data-id')
     cardsChosen.push(myCards[cardId].name)
     cardsChosenId.push(cardId)
     this.setAttribute('src', myCards[cardId].img)
     if (cardsChosen.length === 2) {
-        setTimeout(match, 500)
+        setTimeout(match, 400)
     }
 }
 
@@ -132,37 +130,21 @@ function match() {
     }
     cardsChosen = []
     cardsChosenId = []
-    // if (cardsMatched.length === myCards.length/2) {
-    //     winLoss.innerHTML = 'You Have Found Them All'
-    // } 
-}
-
-
-function countClicks() {
-    count += 1 * .5
-    const clickData = document.getElementById('clicks');
-    clickData.textContent = "Number of Clicks ("+ count +")"
-    const gameOver = cardsMatched.length === myCards.length/2
-    if (gameOver && count < 35) {
+    if (cardsMatched.length === myCards.length/2 && count < 35) {
+        console.log('hitting')
         winLoss.innerHTML = 'You Are Victorious!'
     } else if (count > 35) {
         winLoss.innerHTML = 'YOU LOSE!'
     }
 }
 
-// function checkWin(count) {
-//     // const gameOver = cardsMatched.length === myCards.length/2
-//     // const win = count <= 25 && gameOver
-//     // const lose = count > 25
-// }
+
+function countClicks() {
+    console.log('countClicks firing')
+    count += 1 
+    console.log(count)
+    const clickData = document.getElementById('clicks');
+    clickData.textContent = "Number of Clicks ("+ count +")"
+}
 
 init();
-
-
-//add cards to td
-//click reveals card
-// if two cards match up they stay up 
-//else they hide again
-//20 tries to win game
-//more than 20 tries and yoou lose game
-
