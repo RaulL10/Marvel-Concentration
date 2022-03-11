@@ -14,9 +14,19 @@ This game is my own blend of a well known memory game, Concentration. Instead of
  ---
 #### GETTING STARTED
 
-_INSTRUCTIONS_ the rules are simple. There are 8 MCU characters. You have 35 clicks to try and match all 8 pairs. If the game is completed in less than 35 clicks the you **_WIN_**. If you use more than the allowed clicks you **_LOSE_**.
+_INSTRUCTIONS_ 
+--- The rules are simple. There are 8 MCU characters. You have 35 clicks to try and match all 8 pairs. If the game is completed in less than 35 clicks the you **_WIN_**. If you use more than the allowed clicks you **_LOSE_**.
+
+https://raull10.github.io/marvel-concentration/
 
 ---
 ##### NEXT STEPS
 
 For future updates to the game, the game can countdown the clicks you have left. In addition, the game can have difficulty levels to really test your memory skills! 
+
+---
+**WIN EXAMPLE**
+<img src="https://i.imgur.com/l8yUfm3.png">
+**LOSS EXAMPLE**
+<img src="https://i.imgur.com/ocsZTd8.png">
+

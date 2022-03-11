@@ -49,10 +49,59 @@ aside {
     font-size: 23px;
     color: white;
     background-image: url(https://i.imgur.com/7rcyyU7.png);
-    background-size: contain;
+    background-position: center;
+    background-size: cover;
 }
 button {
     grid-area: ftr;
     margin: auto;
 }
 
+@media only screen and (min-width: 1500px) {
+    aside {
+        font-size: 35px;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .grid {
+        height: 600px;
+        width: 600px;
+        justify-self: center;
+    }
+    img {
+        height: 150px;
+        width: 150px;
+    }
+    body{
+        grid-template-rows: 1fr 630px 150px;
+        grid-template-columns: 1fr 603px 1fr;
+    }
+}
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 45px;
+    }
+    body {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-size: cover;
+        background-position: center;
+    }
+    .grid {
+        height: 300px;
+        width: 300px;
+        justify-self: center;
+    }
+    img {
+        height: 75px;
+        width: 75px;
+    }
+    aside {
+        font-size: 16px;
+    }
+}
