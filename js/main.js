@@ -121,8 +121,10 @@ function match() {
     cardsChosen = []
     cardsChosenId = []
     if (cardsMatched.length === myCards.length/2 && count < 35) {
+        gridEl.removeEventListener('click', countClicks)
         winLoss.innerHTML = 'You Are Victorious!'
     } else if (count > 35) {
+        gridEl.removeEventListener('click', countClicks)
         winLoss.innerHTML = 'YOU LOSE!'
     }
 }
@@ -131,6 +133,11 @@ function countClicks() {
     count += 1 
     const clickData = document.getElementById('clicks');
     clickData.textContent = "Number of Clicks ("+ count +")"
+}
+const reset = document.querySelector('button')
+reset.addEventListener('click', resetGame)
+function resetGame() {
+    document.location.reload()
 }
 
 init();

@@ -17,7 +17,7 @@ body {
     background-image: url(https://i.imgur.com/EB9R9yo.jpeg);
     background-size: cover;
 }
- 
+
 .grid {
     grid-area: grid;
     justify-self: center;
@@ -34,6 +34,8 @@ footer {
     font-size: 75px;
     color: white;
     justify-self: center;
+    align-items: center;
+    justify-content: center;
     background-color: #00008b;
     border-radius: 5px;
 }
@@ -53,9 +55,28 @@ aside {
     background-size: cover;
 }
 button {
-    grid-area: ftr;
-    margin: auto;
+    grid-area: blank;
+    width: 65px;
+    height: 40px;
+    display: flex;
+    justify-self:  center;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    border-style: none;
+    border-color: #00008b;
+    border-width: 5px;
+    color: white;
+    padding: 90px 100px 90px 100px;
+    background: transparent;
+    background-image: url(https://i.imgur.com/7rcyyU7.png);
+    background-size:cover;
+    background-position: center;
+    font-size: 35px;
+    font-family: 'Comic Neue', cursive;
+    
 }
+
 
 @media only screen and (min-width: 1500px) {
     aside {
@@ -84,6 +105,8 @@ button {
 @media only screen and (max-width: 600px) {
     h1 {
         font-size: 45px;
+        font-display: center;
+        margin: 20px 10px 40px 10px;
     }
     body {
         display: flex;
@@ -103,5 +126,16 @@ button {
     }
     aside {
         font-size: 16px;
+        background-image: none;
+        background-color: #00008b;
+        margin: 5px 10px 15px 10px;
+    }
+    footer {
+        font-size: 40px;
+    }
+    button {
+        padding: 50px 50px 50px 50px;
+        font-size: 20px;
+        margin: 15px 10px 10px 10px;
     }
 }
